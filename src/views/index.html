@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/bootstrap.js"></script>
+  <title>Raid Legends App</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <form class="row gy-2 gx-3 align-items-center" id="newUserForm">
+      <div class="col-auto">
+        <label class="visually-hidden" for="autoSizingInput">Nombre de usuario:</label>
+        <input type="text" class="form-control" id="autoSizingInput" name="user" placeholder="Nombre de usuario">
+      </div>
+      <div class="col-auto">
+        <label class="visually-hidden" name="since" for="autoSizingInput">Fecha de registro: </label>
+        <input type="date" class="form-control" id="autoSizingInput">
+      </div>
+      <button id="btnRegister" type="button" class="btn btn-secondary w-25">Registrar</button>
+    </form>
+  </div>
+
+  <div class="table-responsive-md">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Usuario</th>
+          <th scope="col">Fecha Registro</th>
+          <th scope="col">LLave Del Jefe</th>
+          <th scope="col">LLave De la Hidra</th>
+          <th scope="col">Clan vs Clan</th>
+          <th scope="col">Recompensas Personales</th>
+          <th scope="col">Experiencia del Clan</th>
+          <th scope="col">Estrellas C/24hrs</th>
+          <th scope="col">Puntos totales</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody id="userInfo">
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="eliminar-datos">
+    <button id="reset" type="button" class="btn btn-danger">Reiniciar Puntuaciones</button>
+  </div>
+
+  <script src="./js/renderer.js" type="module"></script>
+</body>
+
+</html>
